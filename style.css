@@ -35,6 +35,7 @@ body{
   font-weight: bold;
   box-shadow: black;
   transform: all 0,3s;
+   transition: transform 0.3s ease;
 }
 .present {
    background: #FEF3E2;
@@ -47,6 +48,30 @@ body{
    border-radius: 20px;
    text-align: center; /* centre tout le contenu */
 }
+.btn:hover{
+   color: #d39dc6;
+   background-color: #50093f;
+   transform: scale(1.2);
+}
+.btn:active{
+  
+   scale: 110px;
+}
+
+.present .btn:hover {
+   display: inline-block; 
+   margin-top: 20px;
+   padding: 12px 25px;
+   background: rgba(204, 106, 183, 0.996);
+   color: white;
+   text-decoration: none;
+   border-radius: 8px;
+   font-weight: bold;
+   color: #d39dc6 ;
+   background-color:#50093f ;
+  
+}
+
 
 .present .btn {
    display: inline-block; 
@@ -76,9 +101,16 @@ h1{
    display: flex;
    justify-content:center;
    gap:20px;
-   flex-wrap: wrap;
-   
+   flex-wrap: wrap; 
 }
+ @keyframes slide-up-down {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
 
 .card{
     background: #F5D2D2;
@@ -91,9 +123,16 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
- 
+
+  animation: slide-up-down 3s ease-in-out 5s;
+
+}
+.card:hover{
+transform: translateY(-16px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
    
 }
+
 .card p {
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    text-align: center;
@@ -123,7 +162,7 @@ h2 {
   margin: 20px auto;
   background: #fff6ef;
   padding: 10px;
-  text-align: left;
+  text-align:left;
 }
 .order-form h2 {
   text-align: center;
@@ -165,8 +204,13 @@ label {
   grid-template-columns: repeat(2, 1fr); /* عمودين */
   gap: 4px;;                 /* المسافة بين الصور */
   display: grid;
+  animation: slide-up-down 3s ease-in-out 5s;
   
 }
+.visit-images img:hover{
+transform: translateY(-16px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);}
+
 .visit-images img {
  
   height: 200px;
@@ -206,6 +250,7 @@ label {
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s ease;
+  animation: slide-up-down 3s ease-in-out 5s;
    
 }
 .card1-img {
@@ -214,6 +259,12 @@ label {
   object-fit: cover;
 
 }
+
+.card1:hover{
+   transform: translateY(-16px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);}
+
+
 
 .order-form .btn {
    display: inline-block;
@@ -226,4 +277,37 @@ label {
    font-weight: bold;
    cursor: pointer;
    border: none;
+<<<<<<< HEAD
+   transition: transform 0.3s ease;
+   background-color: #50093f;
+   color: #d39dc6;
+
+}
+.order-form .btn :hover{
+   transform: scale(1.2);
+   background-color: #50093f;
+   color: #d39dc6;
+
+}
+
+
+.present {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1.2s ease forwards;
+}
+.nav{
+   opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1.2s ease forwards;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
